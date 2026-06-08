@@ -1,4 +1,4 @@
-# EX 20 C program to convert the given string to lowercase without using string functions.
+# EX 20 C program to convert the string 'LION' into lowercase
 ## DATE:
 ## AIM:
 To write a C program to convert the given string to lowercase without using string functions.
@@ -14,21 +14,21 @@ To write a C program to convert the given string to lowercase without using stri
 ## Program:
 ```
 #include <stdio.h>
+#include <ctype.h>
 int main() {
- char str[100];
- int i = 0;
- scanf("%s", str); 
- while (str[i] != '\0') {
- if (str[i] >= 'A' && str[i] <= 'Z') {
- str[i] = str[i] + 32; }
- i++; }
- printf("Lowercase string: %s\n", str);
- return 0;
+    char string[100]; 
+    fgets(string, sizeof(string), stdin);
+    for (int i = 0; string[i] != '\0'; i++) {
+        string[i] = tolower(string[i]);
+    }
+    printf("Lower case String is:%s", string);
+    return 0;
 }
+
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/e6997a9a-c0e8-40e3-8b6e-4860f9d1512e)
+<img width="1126" height="201" alt="image" src="https://github.com/user-attachments/assets/d4dc0a3b-dd6e-45d2-8a67-36b1ddf73733" />
 
 ## Result:
 Thus the program was executed and the output was verified successfully.
