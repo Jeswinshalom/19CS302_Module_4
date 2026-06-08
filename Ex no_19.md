@@ -1,8 +1,7 @@
-# EX 19 C program to perform basic left and right shift operations on a given integer and display the result.
+# EX 19 C program to input character from user and check whether character is uppercase or lowercase alphabet using simple if
 ## DATE:
 ## AIM:
-To write a C program to perform basic left and right shift operations on a given integer and display the result.
-
+To write a C program to input character from user and check whether character is uppercase or lowercase alphabet using simple if
 ## Algorithm
 1.Start
 2.Declare variables: num, leftShift, rightShift
@@ -17,21 +16,29 @@ To write a C program to perform basic left and right shift operations on a given
 ## Program:
 ```
 #include <stdio.h>
-int main() {
-    int num, leftShift, rightShift;
-    printf("Enter an integer: ");
-    scanf("%d", &num);
-    leftShift = num << 1;
-    rightShift = num >> 1;
-    printf("Original number: %d\n", num);
-    printf("After left shift by 1: %d\n", leftShift);
-    printf("After right shift by 1: %d\n", rightShift);
+#include <ctype.h>
+int main()
+{
+    char ch;
+    scanf("%c", &ch);
+    if(ch >='A' && ch<='Z')
+    {
+        printf("It is uppercase character");
+    }
+    else if(ch >='a' && ch<='z')
+    {
+        printf("It is in lowercase character");
+    }
+    else
+    {
+           printf("It is not an alphabet");
+    }
     return 0;
 }
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/ea50e6fc-c6fa-4c63-81bb-6b373115ef75)
+<img width="1133" height="200" alt="Screenshot 2026-06-08 142051" src="https://github.com/user-attachments/assets/52e6da28-d0e9-4b1e-9784-b780b4fd7792" />
 
 
 ## Result:
